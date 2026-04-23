@@ -29,9 +29,14 @@
         boston: "https://i0.wp.com/www.onegreenplanet.org/wp-content/uploads/2020/03/screen-shot-2020-03-30-at-12-35-21-pm.png?fit=763%2C657&ssl=1",
       };
 
-      $("#donut-form").on("submit", function (event) {
+      $("#donut-form").on("submit", function(event) {
         event.preventDefault();
-
+var $donutType = $(this).find("[name=type]"); 
+var donutType = $donutType.val();
+var $img = $("<img>");
+$img.width(100);
+$img.attr("src",donutImages{donutType});
+$img.appendTo("body");
         
         
         
